@@ -1,7 +1,7 @@
 $( document ).ready(function() {
 
   var allcards = "Logo, Counterpary, Amount, Date, Spending category, Time stamp, Location, Type of transaction, Excluded";
-  var allsub = "Image of the merchant, Like: Migros - SBB - Coop, 35.50 CHF, 23. Feb., Like: Living - Household - Payments, 10:35, Zurich - Basel - Bern, Online - POS - Credit Card, Mark if it is excluded from the analysis";
+  var allsub = "Image of the merchant, Like: Migros - SBB - Coop, 35.50 CHF, 23. Feb., Like: Living - Household - Payments, 10:35, Zurich - Basel - Bern, Online - InStore - Credit Card, Mark if it is excluded from the analysis";
   
   var cards = allcards.split(',');
   var sub = allsub.split(',');

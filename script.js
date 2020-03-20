@@ -1,12 +1,14 @@
 $( document ).ready(function() {
 
-  var allcards = "Logo, Counterpary, Amount, Date, Spending category, Time stamp, Location, Type of transaction: online - pos - credit card, Excluded from the analysis";
+  var allcards = "Logo, Counterpary, Amount, Date, Spending category, Time stamp, Location, Type of transaction, Excluded";
+  var allsub = "Image of the merchant, Like: Migros - SBB - Coop, 35.50 CHF, 23. Feb., Like: Living - Household - Payments, 10:35, Zurich - Basel - Bern, Online - POS - Credit Card, Mark if it is excluded from the analysis";
   
   var cards = allcards.split(',');
+  var sub = allsub.split(',');
   shuffle(cards);
   for (i = 0; i < cards.length; i++) { 
     
-   $('.cards').append('<li class="card ui-state-default" data-value="'+cards[i]+'">'+cards[i]+'</li>');
+   $('.cards').append('<li class="card ui-state-default" data-value="'+cards[i]+'">'+cards[i]+'<span class="subs" data-value="'+sub[i]+'">'+sub[i]+'</span></li>');
     
   }
   $(".cards").sortable();
@@ -38,12 +40,7 @@ $( document ).ready(function() {
     , j = 0
     , temp = null
 
-  for (i = array.length - 1; i > 0; i -= 1) {
-    j = Math.floor(Math.random() * (i + 1))
-    temp = array[i]
-    array[i] = array[j]
-    array[j] = temp
-  }
+  
 }
   
 });
